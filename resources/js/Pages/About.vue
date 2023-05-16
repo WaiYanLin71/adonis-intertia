@@ -1,14 +1,12 @@
 
 
 <template>
-  <div>
-    <Link href="/">Home</Link>
-    <Link href="/about">About</Link>
-  </div>
+   <NavBar/>
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import NavBar from '../components/NavBar.vue'
+
 </script>
 
 <style lang="scss" scoped>

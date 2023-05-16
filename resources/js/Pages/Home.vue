@@ -1,16 +1,13 @@
-
-
 <template>
-  <div>
-    <Link href="/">Home</Link>
-    <Link href="/about">About</Link>
-  </div>
+  <NavBar />
 </template>
 
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { Head } from '@inertiajs/vue3'
+import NavBar from '../components/NavBar.vue'
+const props = defineProps({
+  title: String
+})
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
