@@ -1,4 +1,4 @@
-const { join } = require('path')
+const { join, resolve } = require('path')
 const Encore = require('@symfony/webpack-encore')
 
 /*
@@ -77,6 +77,7 @@ Encore.cleanupOutputBeforeBuild()
 |
 */
 Encore.enableVersioning(Encore.isProduction())
+
 
 /*
 |--------------------------------------------------------------------------

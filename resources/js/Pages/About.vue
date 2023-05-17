@@ -1,11 +1,17 @@
-
-
 <template>
-   <NavBar/>
+
 </template>
 
+
+<script>
+  import DefaultLayout from '@/Layouts/DefaultLayout.vue'
+  export default {
+    layout: DefaultLayout
+  }
+
+</script>
+
 <script setup>
-import NavBar from '../components/NavBar.vue'
 
 </script>
 

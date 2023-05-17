@@ -14,4 +14,11 @@ Inertia.share({
   errors: (ctx) => {
     return ctx.session.flashMessages.get('errors');
   },
+  authUser: (ctx) => {
+    if (ctx.auth.user) {
+      const { password, ...others } = ctx.auth.user
+      return others;
+    }
+    return {}
+  }
 }).version(() => Inertia.manifestFile('public/assets/manifest.json'));

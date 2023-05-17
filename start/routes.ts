@@ -1,3 +1,4 @@
+import Hash from '@ioc:Adonis/Core/Hash'
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -20,12 +21,16 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ inertia }) => {
-  return inertia.render('Home', {
-    'title' : 'hello',
-  })
-})
+Route.get('/', 'HomeController.index')
+Route.get('/about', async ({ inertia }) => inertia.render('About'))
 
-Route.get('/about', async ({ inertia }) => {
-  return inertia.render('About')
-})
+// Route.get('/create',async ({}) => {
+//   await prisma.user.createMany({
+//     data: [
+//       { name: 'Bob', email: 'bosb@prisma.io', password:'12345678' },
+//       { name: 'Bobo', email: 'bobs@prisma.io', password:'12345678' },
+//       { name: 'Yewande', email: 'yewande@prisma.io', password:'12345678' },
+//       { name: 'Angelique', email: 'angelique@prisma.io', password:'12345678' },
+//     ],
+//   })
+// })
