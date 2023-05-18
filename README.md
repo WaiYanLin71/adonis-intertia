@@ -24,12 +24,22 @@ Create a .env file in the root directory of your project and update the followin
 
 ```
 PORT=3333
-DB_CONNECTION=mysql
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=<database-username>
-DB_PASSWORD=<database-password>
-DB_DATABASE=<database-name>
+HOST=0.0.0.0
+NODE_ENV=development
+APP_KEY=iomDLKB2M2cVu5nNuWGYuOJKb7WHwp8x
+DRIVE_DISK=local
+SESSION_DRIVER=cookie
+CACHE_VIEWS=false
+
+
+# This was inserted by `prisma init`:
+# Environment variables declared in this file are automatically made available to Prisma.
+# See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+
+# Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+# See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+
+DATABASE_URL="mongodb://127.0.0.1:27017/adnis"
 ```
 
 ### Step 4: Setup Prisma
